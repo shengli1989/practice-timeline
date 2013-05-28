@@ -1,0 +1,19 @@
+doctype 5
+html
+  head
+    title= data["site-title"]
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+    = render "og"
+
+    -# css
+    link rel="stylesheet" href="/stylesheets/all.css" media="screen"
+
+    -# javascript
+
+
+
+  body
+    .container= yield
+
+    = livereload_js unless ENV["RACK_ENV"] == "production"

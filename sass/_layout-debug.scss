@@ -1,0 +1,16 @@
+/* debug background grid */
+body {
+  $grid-background-column-color: rgba(#f15a14,.2);
+  $grid-background-baseline-color: rgba(#009a8e,.3);
+  @include baseline-grid-background;
+}
+
+.container {
+  @include susy-grid-background;
+  @include at-breakpoint($ipad) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($desktop) {
+    @include susy-grid-background;
+  }
+}
